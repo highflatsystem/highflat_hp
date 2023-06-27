@@ -1,0 +1,1043 @@
+@import "compass";
+@import "var";
+
+html {
+  font-size: 62.5%;
+}
+
+/* 1.6rem=16px */
+
+.base {
+  background: $gry;
+  color: $blk;
+  font-family: "Noto Sans JP", "Helvetica Neue", Arial,
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-feature-settings: "palt";
+  font-weight: 100;
+  letter-spacing: 0.25rem;
+  position: relative;
+  z-index: -4;
+}
+
+.container {
+  background: $wht;
+  padding: 0;
+  position: relative;
+  z-index: -3;
+}
+
+.head {
+  /* メインビジュアル画像 */
+  background: url("../img/main_bg.png") no-repeat $wht;
+  border-bottom: 1px solid #d3d3d3;
+  padding: 0 4rem;
+  position: relative;
+  z-index: 0;
+}
+
+.companyname {
+  margin: 0 0 3rem;
+  padding: 63rem 0 0;
+}
+
+.navcontainer {
+  font-size: 2rem;
+  letter-spacing: 0;
+  margin: 0 0 3rem;
+
+  .mainnav {
+    .mainnavitem {
+      border-right: 1px solid #d3d3d3;
+      padding: 0 0.2rem;
+      position: relative;
+
+      .mainnavlink {
+        color: $grn;
+        line-height: 2rem;
+        padding: 1rem 3rem;
+
+        &:hover {
+          background: $grn;
+          color: $wht;
+          font-size: 0;
+        }
+      }
+
+      &:hover {
+        .subnav {
+          display: flex;
+          margin: 0;
+          width: calc(100% - 0.4rem);
+        }
+      }
+
+      /*
+    - メインメニューホバーテキスト指定
+    - ドロップダウンマージン調整
+    */
+      &:nth-of-type(1) {
+        border-left: 1px solid #d3d3d3;
+
+        .mainnavlink {
+          &:hover {
+            line-height: 1.3rem;
+            padding: 1.1rem 2rem 1rem 3rem;
+
+            &:before {
+              content: ("会社案内");
+              font-size: 1.4rem;
+              letter-spacing: 1rem;
+              position: relative;
+              top: 1px;
+            }
+          }
+        }
+
+        .subnav {
+          .subnavitem {
+            .subnavlink {
+              line-height: 1.1rem;
+            }
+
+            &:nth-of-type(1) {
+              .subnavlink {
+                &:hover {
+                  line-height: 1.3rem;
+                  padding: 0.9rem 0 0.3rem 1rem;
+
+                  &:before {
+                    content: ("理念");
+                    font-size: 1.4rem;
+                    letter-spacing: 1rem;
+                  }
+                }
+              }
+            }
+
+            &:nth-of-type(2) {
+              .subnavlink {
+                &:hover {
+                  line-height: 1.3rem;
+                  padding: 0.9rem 0 0.3rem 1rem;
+
+                  &:before {
+                    content: ("会社概要");
+                    font-size: 1.4rem;
+                    letter-spacing: 1rem;
+                  }
+                }
+              }
+            }
+
+            &:nth-of-type(3) {
+              .subnavlink {
+                &:hover {
+                  line-height: 1.3rem;
+                  padding: 0.9rem 0 0.3rem 1rem;
+
+                  &:before {
+                    content: ("オフィス環境");
+                    font-size: 1.4rem;
+                    letter-spacing: 1rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        .mainnavlink {
+          &:hover {
+            line-height: 1.3rem;
+            padding: 1.1rem 1.8rem 1rem 2.75rem;
+
+            &:before {
+              content: ("事業案内");
+              font-size: 1.4rem;
+              letter-spacing: 1rem;
+              position: relative;
+              top: 1px;
+            }
+          }
+        }
+
+        .subnav {
+          .subnavitem {
+            &:nth-of-type(1) {
+              .subnavlink {
+                &:hover {
+                  padding: 1.3rem 0 1.3rem 1rem;
+
+                  &:before {
+                    content: ("システム\A開発");
+                    font-size: 1.4rem;
+                    letter-spacing: 1rem;
+                    white-space: pre;
+                  }
+                }
+              }
+            }
+
+            &:nth-of-type(2) {
+              .subnavlink {
+                &:hover {
+                  padding: 1.3rem 0 1.3rem;
+
+                  &:before {
+                    content: ("エンジニアリング\Aサービス");
+                    font-size: 1.4rem;
+                    white-space: pre;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-of-type(3) {
+        .mainnavlink {
+          &:hover {
+            line-height: 1.3rem;
+            padding: 1.1rem 0.3rem 1rem 0.25rem;
+
+            &:before {
+              content: ("社員メンバー");
+              font-size: 1.4rem;
+              letter-spacing: 0.9rem;
+              position: relative;
+              top: 1px;
+              left: 4px;
+            }
+          }
+        }
+
+        .subnav {
+          .subnavitem {
+            .subnavlink {
+              line-height: 1.1rem;
+            }
+
+            &:nth-of-type(1) {
+              .subnavlink {
+                &:hover {
+                  line-height: 1.3rem;
+                  padding: 0.9rem 0 0.3rem 0.5rem;
+
+                  &:before {
+                    content: ("メンバー紹介");
+                    font-size: 1.4rem;
+                    letter-spacing: 0.5rem;
+                  }
+                }
+              }
+            }
+
+            &:nth-of-type(2) {
+              .subnavlink {
+                &:hover {
+                  line-height: 1.3rem;
+                  padding: 0.9rem 0 0.3rem 0.5rem;
+
+                  &:before {
+                    content: ("社内イベント");
+                    font-size: 1.4rem;
+                    letter-spacing: 0.5rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-of-type(4) {
+        .mainnavlink {
+          &:hover {
+            line-height: 1.3rem;
+            padding: 1.1rem 0.8rem 1rem 1.8rem;
+
+            &:before {
+              content: ("採用案内");
+              font-size: 1.4rem;
+              letter-spacing: 1rem;
+              position: relative;
+              top: 1px;
+            }
+          }
+        }
+
+        .subnav {
+          .subnavitem {
+            .subnavlink {
+              line-height: 1.1rem;
+            }
+
+            &:nth-of-type(1) {
+              .subnavlink {
+                &:hover {
+                  line-height: 1.3rem;
+                  padding: 0.9rem 0 0.3rem 1rem;
+
+                  &:before {
+                    content: ("ポリシー");
+                    font-size: 1.4rem;
+                    letter-spacing: 1rem;
+                  }
+                }
+              }
+            }
+
+            &:nth-of-type(2) {
+              .subnavlink {
+                &:hover {
+                  line-height: 1.3rem;
+                  padding: 0.9rem 0 0.3rem 1rem;
+
+                  &:before {
+                    content: ("採用情報");
+                    font-size: 1.4rem;
+                    letter-spacing: 1rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-of-type(5) {
+        .mainnavlink {
+          &:hover {
+            line-height: 1.3rem;
+            padding: 1.1rem 0 1rem;
+
+            &:before {
+              content: ("お問い合わせ");
+              font-size: 1.4rem;
+              letter-spacing: 0.8rem;
+              position: relative;
+              top: 1px;
+              left: 4px;
+            }
+          }
+        }
+      }
+    }
+
+    .subnav {
+      background: $wht;
+      display: none;
+      font-size: 1.6rem;
+      position: absolute;
+      width: 100%;
+      z-index: 100;
+
+      .subnavitem {
+        border-bottom: 1px dotted #d3d3d3;
+
+        &:last-child {
+          border: none;
+        }
+
+        .subnavlink {
+          color: $dgry;
+          padding: 1rem 0;
+
+          &:hover {
+            font-size: 0;
+          }
+        }
+
+        &:hover {
+          background: #ccc;
+
+          .subnavlink {
+            color: $wht;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sns {
+  margin: 0 0 3rem;
+
+  .snslink {
+    margin-left: 2rem;
+    padding: 0;
+
+    .snsimg {
+      width: 4rem;
+    }
+
+    &:hover {
+      .snsimg {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.background {
+  padding: 15rem 0 0;
+
+  &:before {
+    background: url(../img/contents_bg.png) center no-repeat;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 100vh;
+    left: auto;
+    max-width: 1140px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+  }
+
+  .contents {
+    margin: 0 0 20rem;
+  }
+}
+
+.photonavhead {
+  height: 8rem;
+  margin: 0 7.5rem 3rem;
+
+  .photonavheadimg {
+    height: 100%;
+  }
+}
+
+.photonav {
+  margin: 0 0 7rem;
+
+  .photonavitem {
+    padding: 0;
+
+    .photonavlink {
+      padding: 0;
+
+      .photonavimg {
+        width: 100%;
+
+        &:hover {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/* フォトナビ切り替え画像 */
+.contents {
+  .photonav {
+    &:nth-of-type(1) {
+      .photonavitem {
+        a {
+          &:hover {
+            display: block;
+            width: 100%;
+          }
+        }
+
+        &:nth-of-type(1) {
+          a:hover {
+            content: url(../img/vision_on.png);
+          }
+        }
+
+        &:nth-of-type(2) {
+          a:hover {
+            content: url(../img/profile_on.png);
+          }
+        }
+
+        &:nth-of-type(3) {
+          a:hover {
+            content: url(../img/office_on.png);
+          }
+        }
+      }
+    }
+
+    &:nth-of-type(2) {
+      .photonavitem {
+        a {
+          &:hover {
+            display: block;
+            width: 100%;
+          }
+        }
+
+        &:nth-of-type(1) {
+          a:hover {
+            content: url(../img/system_on.png);
+          }
+        }
+
+        &:nth-of-type(2) {
+          a:hover {
+            content: url(../img/engineering_on.png);
+          }
+        }
+      }
+    }
+
+    &:nth-of-type(3) {
+      .photonavitem {
+        a {
+          &:hover {
+            display: block;
+            width: 100%;
+          }
+        }
+
+        &:nth-of-type(1) {
+          a:hover {
+            content: url(../img/intro_on.png);
+          }
+        }
+
+        &:nth-of-type(2) {
+          a:hover {
+            content: url(../img/events_on.png);
+          }
+        }
+      }
+    }
+
+    &:nth-of-type(4) {
+      .photonavitem {
+        a {
+          &:hover {
+            display: block;
+            width: 100%;
+          }
+        }
+        &:nth-of-type(1) {
+          a:hover {
+            content: url(../img/policy_on.png);
+          }
+        }
+
+        &:nth-of-type(2) {
+          a:hover {
+            content: url(../img/recruit_on.png);
+          }
+        }
+      }
+    }
+  }
+}
+
+.secondhead {
+  margin: 0 22.5rem 2.5rem;
+
+  .secondheadimg {
+    width: 100%;
+  }
+}
+
+.thirdhead {
+  height: 10rem;
+  margin: 0 0 4.5rem;
+
+  .thirdheadimg {
+    height: 100%;
+  }
+
+  &.threeline {
+    height: 16.2rem;
+  }
+}
+
+.fourthhead {
+  margin: 0 0 5rem;
+
+  .fourthheadimg {
+    height: 3.5rem;
+  }
+}
+
+.maintext {
+  font-size: 1.8rem;
+  line-height: 3.6rem;
+  margin-bottom: 4rem;
+}
+
+.basiclist {
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+  list-style-type: none;
+  padding: 0;
+
+  .basiclistitem {
+    margin: 0 0 1.7rem;
+  }
+}
+
+.pointlist {
+  font-size: 1.7rem;
+  line-height: 3.4rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  .pointlistitem {
+    &:before {
+      content: "・";
+      margin: 0 0.5rem 0 0;
+    }
+  }
+}
+
+.photolist {
+  margin: 0;
+  padding: 0 2rem 0;
+
+  .photolistitem {
+    list-style-type: none;
+    padding: 0 1rem 0;
+
+    .photolistimg {
+      width: 100%;
+    }
+
+    .photolisttext {
+      display: block;
+      font-size: 1.7rem;
+      margin: 1rem 0 0;
+    }
+  }
+}
+
+.googlemap {
+  height: 2.5rem;
+}
+
+.vision {
+  margin: 0 0 10rem;
+}
+
+.profile {
+  margin: 0 0 10rem;
+
+  .profilelist {
+    font-size: 1.6rem;
+    letter-spacing: 0.5rem;
+    line-height: 3.2rem;
+
+    .profilelisthead {
+      font-weight: normal;
+    }
+
+    profilelistitem {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.access {
+  margin: 0 0 10rem;
+
+  .map {
+    margin: 0 3rem 1.5rem;
+
+    .mapimg {
+      width: 100%;
+    }
+  }
+
+  .googlemap {
+    margin: 0 3rem;
+  }
+}
+
+.office {
+  margin: 0 0 10rem;
+}
+
+.systemdev {
+  margin: 0 0 10rem;
+}
+
+.engineer {
+  .servicelist {
+    font-size: 2rem;
+    line-height: 4rem;
+    margin: 0 7.5rem 0 2.5rem;
+    padding: 0;
+
+    .servicelistitem {
+      list-style-type: none;
+      padding: 0 0 0 5rem;
+
+      .servicelistimg {
+        width: 100%;
+      }
+
+      span {
+        display: block;
+        margin: 2rem 0 0;
+      }
+    }
+  }
+}
+
+.intro {
+  margin: 0 0 8rem;
+
+  .membercontainer {
+    height: 119.6rem;
+    margin: 0 5rem;
+
+    .membericn {
+      margin: 0 4rem 2rem 0;
+      width: 17.8rem;
+
+      .membericnimg {
+        width: 100%;
+      }
+
+      /* 社員紹介切り替え */
+      &:nth-of-type(1) {
+        &:hover {
+          content: url("../img/memberA_icn.png");
+
+          & ~ .memberdetail {
+            background: rgba(255, 255, 255, 0.5);
+            content: url("../img/memberA_detail.png");
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        &:hover {
+          content: url("../img/memberB_icn.png");
+
+          & ~ .memberdetail {
+            background: rgba(255, 255, 255, 0.5);
+            content: url("../img/memberB_detail.png");
+          }
+        }
+      }
+
+      &:nth-of-type(3) {
+        &:hover {
+          content: url("../img/memberC_icn.png");
+
+          & ~ .memberdetail {
+            background: rgba(255, 255, 255, 0.5);
+            content: url("../img/memberC_detail.png");
+          }
+        }
+      }
+
+      &:nth-of-type(4) {
+        &:hover {
+          content: url("../img/memberD_icn.png");
+
+          & ~ .memberdetail {
+            background: rgba(255, 255, 255, 0.5);
+            content: url("../img/memberD_detail.png");
+          }
+        }
+      }
+
+      &:nth-of-type(5) {
+        &:hover {
+          content: url("../img/memberE_icn.png");
+
+          & ~ .memberdetail {
+            background: rgba(255, 255, 255, 0.5);
+            content: url("../img/memberE_detail.png");
+          }
+        }
+      }
+
+      &:nth-of-type(6) {
+        &:hover {
+          content: url("../img/memberF_icn.png");
+
+          & ~ .memberdetail {
+            background: rgba(255, 255, 255, 0.5);
+            content: url("../img/memberF_detail.png");
+          }
+        }
+      }
+
+      &:nth-of-type(7) {
+        &:hover {
+          content: url("../img/memberG_icn.png");
+
+          & ~ .memberdetail {
+            background: rgba(255, 255, 255, 0.5);
+            content: url("../img/memberG_detail.png");
+          }
+        }
+      }
+
+      &:nth-of-type(8) {
+        &:hover {
+          content: url("../img/memberH_icn.png");
+
+          & ~ .memberdetail {
+            background: rgba(255, 255, 255, 0.5);
+            content: url("../img/memberH_detail.png");
+          }
+        }
+      }
+
+      &:nth-of-type(9) {
+        &:hover {
+          content: url("../img/memberI_icn.png");
+
+          & ~ .memberdetail {
+            background: rgba(255, 255, 255, 0.5);
+            content: url("../img/memberI_detail.png");
+          }
+        }
+      }
+
+      &:nth-of-type(10) {
+        &:hover {
+          content: url("../img/memberJ_icn.png");
+
+          & ~ .memberdetail {
+            background: rgba(255, 255, 255, 0.5);
+            content: url("../img/memberJ_detail.png");
+          }
+        }
+      }
+
+      &:nth-of-type(11) {
+        &:hover {
+          content: url("../img/memberK_icn.png");
+
+          & ~ .memberdetail {
+            background: rgba(255, 255, 255, 0.5);
+            content: url("../img/memberK_detail.png");
+          }
+        }
+      }
+    }
+
+    .memberdetail {
+      margin: 0 0 0 6rem;
+      width: 54.5rem;
+
+      .memberdetailimg {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.events {
+  margin: 0 0 10rem;
+}
+
+.policy {
+  margin: 0 0 10rem;
+}
+
+.recruitment {
+  margin: 0 0 7.5rem;
+
+  .recruitdetail {
+    background: $wht;
+    font-size: 1.7rem;
+    letter-spacing: 0;
+    margin: 0 15rem;
+    padding: 3rem 5rem;
+
+    .recruitdetailhead {
+      border-bottom: 1px solid #d3d3d3;
+      color: $brw;
+      font-weight: 800;
+      padding: 2rem 0;
+
+      &:last-of-type {
+        border: none;
+      }
+    }
+
+    .recruitdetailitem {
+      border-bottom: 1px solid #d3d3d3;
+      margin: 0;
+      padding: 1.5rem 0 2rem;
+
+      &:last-of-type {
+        border: none;
+      }
+    }
+
+    .notes {
+      font-size: 1.7rem;
+      line-height: 1.7rem;
+
+      &:before {
+        content: "※";
+      }
+    }
+
+    .contactbtn {
+      background: none;
+      border: none;
+      height: 2.5rem;
+      padding: 0;
+
+      .contactbtnlink {
+        .contactbtnimg {
+          height: 100%;
+          vertical-align: bottom;
+
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  .contacttext {
+    font-size: 3rem;
+    line-height: 3rem;
+    margin: 0 0 1.7rem;
+  }
+
+  .address {
+    background: $wht;
+    border: 0.7rem solid $brw;
+    margin: 0 2rem;
+    padding: 4rem;
+
+    .contactformbtn {
+      background: $brw;
+      border: none;
+      border-radius: 0.5rem;
+      box-shadow: 0.4rem 0.4rem 0 0 rgba(0, 0, 0, 0.25);
+      font-size: 3rem;
+      line-height: 3rem;
+      margin: 0 0 3rem;
+      padding: 2rem;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      .contactformlink {
+        color: $wht;
+        font-weight: 700;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      .contactformicn {
+        font-size: 5.5rem;
+        line-height: 1rem;
+        margin-right: 1rem;
+        position: relative;
+        top: 0.5rem;
+      }
+    }
+
+    .tel {
+      display: block;
+      font-size: 6rem;
+      font-weight: 700;
+      margin: 0 0 3rem;
+
+      .tellink {
+        color: $blk;
+
+        &:hover {
+          opacity: 0.5;
+          text-decoration: none;
+        }
+
+        &:before {
+          background: url(../img/tel_icn.png);
+          background-size: contain;
+          content: "";
+          display: inline-block;
+          height: 9.3rem;
+          margin: 0 2rem 0 0;
+          vertical-align: bottom;
+          width: 5.1rem;
+        }
+      }
+    }
+
+    .mail {
+      display: block;
+
+      .mailtext {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 3rem 0 0;
+      }
+
+      .maillink {
+        color: $blk;
+        display: block;
+        font-size: 4rem;
+        font-weight: 700;
+
+        &:hover {
+          opacity: 0.5;
+          text-decoration: none;
+        }
+
+        &:before {
+          background: url(../img/mail_icn.png);
+          background-size: contain;
+          content: "";
+          display: inline-block;
+          height: 4.6rem;
+          margin: 0 2rem 0 0;
+          vertical-align: text-bottom;
+          width: 6.3rem;
+        }
+      }
+    }
+  }
+}
+
+.topbutton {
+  bottom: 4rem;
+  margin: 0 2rem 0 0;
+  position: sticky;
+  margin-left: calc(100% - 10.3rem);
+
+  .topbuttonlink {
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 0.5rem;
+    height: 7.6rem;
+    margin: 5rem 0 1rem;
+    padding: 1rem;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    .topbuttonimg {
+      height: 100%;
+    }
+  }
+}
+
+.footer {
+  margin: 0 2rem 0;
+  padding: 0 0 6rem;
+}
